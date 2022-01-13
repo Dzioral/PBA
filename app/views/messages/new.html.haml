@@ -1,0 +1,4 @@
+= turbo_frame_tag 'new_message' do
+  = form_with model: [ @chat, Message.new ], data: { controller: 'chat', action: 'turbo:submit-end->chat#reset'} do |form|
+    = form.text_area :content, size: "50x1"
+    = form.submit

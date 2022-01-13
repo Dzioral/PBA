@@ -1,3 +1,7 @@
-=turbo_stream_from @chat
-=render partial: 'messages/message', collection: @messages, current_user: @current_user
--# =render @chat.messages
+= render partial: 'layouts/navbar'
+= turbo_stream_from @chat
+.chat{ 'data-controller': 'chat', 'data-chat-target': 'chat', 'data-receiver': "#{@current_user.id}" }
+  #messages-container
+    #messages
+      = render @chat.messages
+  = turbo_frame_tag 'new_message', src: new_chat_message_path(@chat)

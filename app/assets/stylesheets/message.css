@@ -1,0 +1,32 @@
+#messages-container {
+  height: 75vh;
+  overflow: scroll;
+  display: flex;
+}
+
+#messages {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 100%;
+}
+
+.message-row {
+  margin: .3em;
+}
+
+.message {
+  display: inline-block;
+  border-radius: 1.2em;
+  padding: .6em 1.2em;
+}
+
+.message.sent {
+  background-color: #044c4e;
+}
+
+.message.received {
+  background-color: #4e0442;
+  float: right;
+}

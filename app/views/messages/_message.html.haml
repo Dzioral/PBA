@@ -1,6 +1,4 @@
-=message.content
-%br
-
--# %div{class: "#{message.sender_id==current_user.id ? 'sent' : 'received'}"}
-  -# =message.sender_id==current_user.id ? 'sent' : 'received'
+%div{ class: "message-row" }
+  .message{ "data-sender": "#{message.sender_id}", 'data-chat-target': 'message' }
+    =message.content
 

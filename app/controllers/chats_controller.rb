@@ -6,7 +6,7 @@ class ChatsController < ApplicationController
 
   def show
     @messages = @chat.messages
-    @current_user = current_user
+    @current_user_id = current_user.id
   end
 
   private
